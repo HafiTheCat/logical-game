@@ -1,0 +1,32 @@
+/* Write your global styles here, in PostCSS syntax */
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+	.writingmode-vert {
+		writing-mode: vertical-rl;
+		@apply rotate-180;
+	}
+
+	.cellcs {
+		@apply bg-gray-200 w-8 h-8 rounded hover:bg-gray-100;
+	}
+
+	.group {
+		@apply grid;
+	}
+	/* border border-black p-1*/
+
+	.head {
+		@apply bg-gray-300 grid place-items-center rounded;
+	}
+
+	.cell {
+		width: 6rem;
+		height: 6rem;
+	}
+}
